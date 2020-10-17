@@ -130,25 +130,32 @@ const myNumbers = [3, 55, 788, 2, 1]
 
 // First, use .map to create a new array that doubles each number. Call the new array 'doubled'.
 
-let doubled = []; doubled.push(arr[i] * 2);
+let doubled = myNumbers.map(n=> n*2)
 
+// doubledNumbers = numbers.map(n => n*2)
 //////////////////PROBLEM 15////////////////////
 
 // Now, use .filter to create a new array containing any numbers that are greater than 100. Call the new array 'filtered'. 
 
-// Code Here
+const filtered = myNumbers.filter( element => {
+	if (element > 100){
+	  return element
+	}
+  })
 
 //////////////////PROBLEM 16////////////////////
 
 // Next, use reduce to get the total of the numbers in the array summed together. Store the total in a new variable named 'total'. 
 
-// Code Here
+let total = myNumbers.reduce((acc, element) => {
+	return acc +( element )
+  }, 0);
 
 //////////////////PROBLEM 17////////////////////
 
 // Finally, use .forEach to find the index of each item in the array. To begin, create an empty array called 'myNumbersIndex'. Then, use forEach to push each item's index from the myNumbers array into the newly created myNumbersIndex array. 
 
-// Code Here
+
 
 //////////////////PROBLEM 18////////////////////
 
@@ -156,6 +163,8 @@ let doubled = []; doubled.push(arr[i] * 2);
 const notGeorge = ['Louis', 'Ted', 'Bill', 'Sharon', 'Mark', 'Angela']
 
 // Code Here
+
+
 
 //////////////////PROBLEM 19////////////////////
 
@@ -169,10 +178,19 @@ const people = [
 	{ name: 'Josh', friend: true, awesomeLevel: 7 }
 ]
 
-// Code Here
+
+const enemies = people.filter(function(element){
+  if(element.friend === false){
+    return element
+  }
+})
 
 //////////////////PROBLEM 20////////////////////
 
 // Using the people array above, get a total of the awesomeLevel from all the people, and store that value in a variable named 'totallyAwesome'. Use .reduce().
 
-// Code Here
+let totallyAwesome = people.reduce((acc, element) => {
+	return acc +( element.awesomeLevel )
+  }, 0);
+
+//   array.filter(function(currentValue, index, arr), thisValue)
