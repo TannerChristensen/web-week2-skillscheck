@@ -154,8 +154,12 @@ let total = myNumbers.reduce((acc, element) => {
 //////////////////PROBLEM 17////////////////////
 
 // Finally, use .forEach to find the index of each item in the array. To begin, create an empty array called 'myNumbersIndex'. Then, use forEach to push each item's index from the myNumbers array into the newly created myNumbersIndex array. 
+let myNumbersIndex = []
 
-
+myNumbers.forEach(index => myNumbersIndex.push(index));
+// myNumbers.forEach(function(item) {
+//     myNumbersIndex.push(item);
+// });
 
 //////////////////PROBLEM 18////////////////////
 

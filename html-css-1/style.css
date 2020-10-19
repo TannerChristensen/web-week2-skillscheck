@@ -1,0 +1,21 @@
+header {
+    width: 100%;
+    height: 80px;
+}
+
+header > div {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    
+    background-color: cyan; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul {
+    width: 300px;
+    display: flex;
+    background-color: cadetblue; 
+    justify-content: space-between;
+}
