@@ -4,18 +4,18 @@
 //////////////////STEP 1////////////////////
 //Create an array called 'groceries' that contains three grocery items as strings. 
 
-let groceries = ["", "", ""]
+let groceries = ["milk", "eggs", "cereal"]
 
 //////////////////STEP 2////////////////////
 //Create a variable called 'yourName' that is assigned the value of your name as a string. 
 
-let yourName = "Tanner"
+var yourName = "Tanner's"
 
 //////////////////STEP 3////////////////////
 //Create a function called 'setGroceryListTitle' that takes in one parameter called 'x'. The function should return a string of 'XPARAM's Grocery List'.
 
 function setGroceryListTitle(x){
-    return (`${x} Grocery List`)
+    return `${x} Grocery List`
 }
 
 //////////////////STEP 4////////////////////
@@ -30,7 +30,7 @@ displayData()
 //Create a function called 'removeItem' that takes in one parameter called 'index'. Inside of the removeItem function, remove the item that corresponds to the index parameter from the groceries array above by using splice. Then, invoke the displayData() function inside of your removeItem function.
 
 function removeItem(index){
-groceries.splice(index)
+groceries.splice(index, 1)
 displayData()
 }
 
@@ -38,17 +38,12 @@ displayData()
 //Create a function called 'checkGroceryCount'. Inside of checkGroceryCount, you're going to check the total number of groceries in your groceries array using .length. Using an if/else statement, check if the number of groceries is greater than or equal to 5. If it is, return the string 'That looks like a big trip' from the function. If the number of groceries is equal to one, return the string '1 item'. If the amount of groceries is between 1 and 5, return the string 'NUMBEROFGROCERIES items' with NUMBEROFGROCERIES replaced by the number of items in your groceries array.
 
 function checkGroceryCount(){
-    for(let i = 0; i < groceries.length; i++){
-        if(groceries.length >= 5){
-            return `That looks like a big trip`
-        }else {
-            if(groceries.length === 1){
-                return `1 item`
-            }else {
-                if(groceries.length > 1 && groceries.length < 5)
-                return(``)
-            }
-        }
+    if(groceries.length >= 5){
+        return 'That looks like a big trip'
+    } else if(groceries.length === 1){
+        return '1 item'
+    } else if(groceries.length > 1 && groceries.length < 5){
+        return `${groceries.length} items`
     }
 }
 
